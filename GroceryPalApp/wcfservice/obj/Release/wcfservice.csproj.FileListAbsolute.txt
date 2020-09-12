@@ -1,0 +1,21 @@
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.dll.config
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.dll
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.pdb
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Release\wcfservice.csprojAssemblyReference.cache
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Release\wcfservice.csproj.CoreCompileInputs.cache
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Release\wcfservice.dll
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Release\wcfservice.pdb
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.dll.config
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.dll
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.pdb
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.csprojAssemblyReference.cache
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.csproj.CoreCompileInputs.cache
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.dll
+C:\Users\Nazneen\Downloads\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.pdb
+D:\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.dll.config
+D:\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.dll
+D:\wcfservice (1)\wcfservice\wcfservice\bin\wcfservice.pdb
+D:\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.csproj.CoreCompileInputs.cache
+D:\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.dll
+D:\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.pdb
+D:\wcfservice (1)\wcfservice\wcfservice\obj\Release\wcfservice.csprojAssemblyReference.cache

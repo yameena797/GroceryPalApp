@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Gp.Models.Item_Info>
+
+
+@{
+
+    ViewBag.Title = "Expiry";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            h1 {
+                font-size: 30px;
+                color: yellow;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 15px;
+                text-decoration: underline;
+                background-color: darkslategray;
+                width: 320px;
+                margin-left: 400px;
+                border: 1px solid yellow;
+            }
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            .tbl-header {
+                width: 1000px;
+                background-color: darkslategray;
+                margin-left: 70px;
+                border: 1px solid yellow;
+            }
+
+            .tbl-content {
+                width: 1000px;
+                height: 460px;
+                margin-left: 70px;
+                overflow-x: auto;
+                margin-top: 0px;
+                background-color: darkslategray;
+                border: 1px solid yellow;
+            }
+
+            th {
+                padding: 20px 15px;
+                text-align: left;
+                font-weight: 800;
+                font-size: 15px;
+                color: yellow;
+                text-transform: uppercase;
+            }
+
+            td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 15px;
+                color: lightyellow;
+                border-bottom: 1px solid yellow
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 10px yellow;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: inset 0 0 10px yellow;
+            }
+        </style>
+    </head>
+
+
+    <body style=" margin-top: 30px; background-image: url(/Content/ee.jpg); background-size: cover;">
+
+        <h1>"ITEMS GOING TO EXPIRED"</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+
+                    <tr>
+
+                        <th>ITEM PIC</th>
+                        <th>BARCODE NUMBER</th>
+                        <th>EXPIRY DATE</th>
+
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+
+                    @foreach (var d in Model)
+                    {
+                    <tr>
+
+                        <td>
+                            @if (d.item_img != null)
+                            {
+                                var imgsrc = "data:image/jpg;base64," + d.item_img;
+                                <img src='@imgsrc' style="max-width:100px;max-height:100px" />
+                            }
+                        </td>
+
+                        <td>
+                            @d.BARCODE_NO
+                        </td>
+
+                        <td>
+                            @d.EXPIRY_DATE
+                        </td>
+
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+}

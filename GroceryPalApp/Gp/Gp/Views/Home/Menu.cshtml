@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Gp.Models.Item_Info>
+
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <style>
+            .circle {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 35px;
+                left: 645px;
+                border-radius: 50%;
+                font-size: 20px;
+                color:white;
+                text-align: center;
+                background: red;
+            }
+
+            .container {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body style="background-color: darkblue">
+
+        <div style="position: relative; left: 0; top: 0;">
+            <a href='@Url.Action("Calorie_Calculator", "Calculator")'>
+                <img src="~/Content/c.jpg" style="width:200px ;height:200px; margin-top: 50px; margin-left: 60px;/">
+            </a>
+
+            <a href='@Url.Action("Expiry", "Notify")'>
+                <img src="~/Content/e.jpg" style="width:200px;height:200px; margin-top: 50px; margin-left:200px;"/>
+            </a>
+
+            <a href='@Url.Action("Inventory", "Management")'>
+                <img src="~/Content/r.jpg" style="width:200px;height:200px; margin-top: 50px; margin-left: 200px;"/>
+            </a>
+
+            @{
+                int c = 0;
+
+                if (Model != null)
+                {
+                    foreach (var d in Model)
+                    {
+                        c++;
+                    }
+                }
+                <div class="circle">@c</div>
+            }
+            
+        </div>
+
+        <div style="font-size: 18px; font-family: Arial; font-weight: bold;">
+            @Html.ActionLink("CALORIE CALCULATOR", "Calorie_Calculator", "Calculator", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 57px;" })
+            @Html.ActionLink("EXPIRY", "Expiry", "Notify", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 262px;" })
+            @Html.ActionLink("PANTRY", "Inventory", "Management", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 328px;" })
+        </div>
+
+        <div>
+            <a href='@Url.Action("Nutrition", "Meter")'>
+                <img src="~/Content/n.jpg" style="width:200px ;height:200px; margin-top: 50px; margin-left:60px;"/>
+            </a>
+
+            <a href='@Url.Action("Barcode_Scanner", "Barcode")'>
+                <img src="~/Content/bs.png" style="width:200px ;height:200px; margin-top: 50px; margin-left:200px;"/>
+            </a>
+
+            <a href='@Url.Action("Recipe", "Generator")'>
+                <img src="~/Content/rr.jpg" style="width:200px;height:200px; margin-top: 50px; margin-left: 200px;"/>
+            </a>
+        </div>
+
+        <div style="font-size: 18px; font-family: Arial; font-weight: bold;">
+            @Html.ActionLink("NUTRITION METER", "Nutrition", "Meter", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 76px;" })
+            @Html.ActionLink("BARCODE SCANNER", "Barcode_Scanner", "Barcode", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 226px;" })
+            @Html.ActionLink("RECIPE GENERATOR", "Recipe", "Generator", "", new { style = "color: lightcyan; margin-top: 10px; margin-left: 212px;" })
+        </div>
+    </body>
+}
+

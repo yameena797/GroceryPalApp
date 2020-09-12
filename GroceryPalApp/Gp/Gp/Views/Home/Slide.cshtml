@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewBag.Title = "Slide";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: maroon;
+  background-color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0s ease;
+}
+
+.active {
+  background-color: maroon;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4.5s;
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+        </style>
+    </head>
+    <body style="background-color: lightgoldenrodyellow;">
+
+        <h2 style=" color: maroon; font-size: 30px; font-family: Forte; text-align: center;">Hey There! Let's Be Adventurers ...</h2>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage (1).jpg" style="width:100%">
+                <div class="text">Barcode Scanner -> Allows you to manually Add/Delete items from your Pantry.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage (3).jpg" style="width:100%">
+                <div class="text">Nutrition Meter -> Allows you to look at your Pantry items nutrition table.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage (4).jpg" style="width:100%">
+                <div class="text">Pantry Management -> Allows you to look what is in your Pantry.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage (2).jpg" style="width:100%">
+                <div class="text">Expiry Notifier -> Allows you to take a look at pantry items going to get expired in 7 days.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage (5).jpg" style="width:100%">
+                <div class="text">Recipe Generator -> Allows you to look at the recipes that can be made by pantry items which are included in Expiry Notifier.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="~/Content/Webp.net-resizeimage.jpg" style="width:100%">
+                <div class="text">Calorie Calculator -> Allows you to maintain your diet by having a look at your BMR (Basal metabolic rate).</div>
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 5000); 
+            }
+        </script>
+
+    </body>
+}
+

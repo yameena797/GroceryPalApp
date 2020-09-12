@@ -1,0 +1,7 @@
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.dll.config
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.dll
+D:\sem7\ipt\project\wcfservice\wcfservice\bin\wcfservice.pdb
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Debug\wcfservice.csproj.CoreCompileInputs.cache
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Debug\wcfservice.dll
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Debug\wcfservice.pdb
+D:\sem7\ipt\project\wcfservice\wcfservice\obj\Debug\wcfservice.csprojAssemblyReference.cache

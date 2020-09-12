@@ -1,0 +1,151 @@
+﻿
+@model IEnumerable<Gp.Models.Item_Info>
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Inventory";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+            h1 {
+                font-size: 30px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            .tbl-header {
+                width: 1200px;
+                background-color: rgba(255,255,255,0.3);
+                margin-left: -90px;
+            }
+
+            .tbl-content {
+                width: 1200px;
+                height: 500px;
+                margin-left: -90px;
+                overflow-x: auto;
+                margin-top: 0px;
+                border: 1px solid rgba(255,255,255,0.5);
+            }
+
+            th {
+                padding: 20px 15px;
+                text-align: left;
+                font-weight: 800;
+                font-size: 15px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 15px;
+                color: #fff;
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+
+
+            /* demo styles */
+
+            @@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+            body {
+                background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+                background: linear-gradient(to right, #25c481, #25b7c4);
+                font-family: 'Roboto', sans-serif;
+            }
+
+            section {
+                margin: 50px;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+            }
+        </style>
+    </head>
+
+    <section>
+        
+        <h1>ENJOY :)</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+
+                    <tr>
+                        <th>BARCODE NUMBER</th>
+                        <th>BRAND</th>
+                        <th>EXPIRY DATE</th>
+                        <th>ITEM PIC</th>
+                    </tr>
+                 
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+
+                    @foreach (var d in Model)
+                    {
+                        <tr>
+                            <td>
+                                @d.BARCODE_NO
+                            </td>
+
+                            <td>
+                                @d.BRAND
+                            </td>
+
+                            <td>
+                                @d.EXPIRY_DATE
+                            </td>
+
+                            <td>
+                                @if (d.item_img != null)
+                                {
+                                    var imgsrc = "data:image/jpg;base64," + d.item_img;
+                                    <img src='@imgsrc' style="max-width:100px;max-height:100px" />
+                                }
+                            </td>
+                        </tr>
+                    }
+                        
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+}

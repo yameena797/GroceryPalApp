@@ -1,0 +1,159 @@
+﻿@using Gp.Models
+
+@{
+                /**/
+
+                ViewBag.Title = "Result";
+                Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            h1 {
+                font-size: 30px;
+                color: yellow;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 15px;
+                text-decoration: underline;
+                background-color: darkslategray;
+                width: 320px;
+                margin-left: 400px;
+                border: 1px solid yellow;
+            }
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            .tbl-header {
+                width: 1000px;
+                background-color: darkslategray;
+                margin-left: 70px;
+                border: 1px solid yellow;
+            }
+
+            .tbl-content {
+                width: 1000px;
+                height: 210px;
+                margin-left: 70px;
+                overflow-x: auto;
+                margin-top: 0px;
+                background-color: darkslategray;
+                border: 1px solid yellow;
+            }
+
+            th {
+                padding: 20px 15px;
+                text-align: left;
+                font-weight: 800;
+                font-size: 15px;
+                color: yellow;
+                text-transform: uppercase;
+            }
+
+            td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 15px;
+                color: lightyellow;
+                border-bottom: 1px solid yellow
+            }
+
+           
+        </style>
+    </head>
+
+
+    <body style=" margin-top: 100px; background-image: url(/Content/ccc.jpg); background-size: cover;">
+
+        <h1>"The Unbeatable Braces Friendly Diet Plan"</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+
+                    <tr>
+                        <th>SEDENTARY</th>
+                        <th>LIGHTLY ACTIVE</th>
+                        <th>MODERATELY ACTIVE</th>
+                        <th>VERY ACTIVE</th>
+                        <th>EXTRA ACTIVE</th>
+                        <th>BMR</th>
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+
+                    @{
+                        var data = ViewBag.Message;
+                    }
+                    <tr>
+                        <td>
+                            Sedentary = BMR x 1.2 (little or no exercise, desk job)
+                        </td>
+
+                        <td>
+                            Lightly active = BMR x 1.375 (light exercise/ sports 1-3 days/week)
+                        </td>
+
+                        <td>
+                            Moderately active = BMR x 1.55 (moderate exercise/ sports 6-7 days/week)
+                        </td>
+
+                        <td>
+                            Very active = BMR x 1.725 (hard exercise every day, or exercising 2 xs/day)
+                        </td>
+
+                        <td>
+                            Extra active = BMR x 1.9 (hard exercise 2 or more times per day, or training for
+                            marathon, or triathlon, etc.
+                        </td>
+                        <td>
+                            Basal Metabolic Rate is the number of calories required to keep your body functioning at rest.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @data.sedentary
+                        </td>
+
+                        <td>
+                            @data.lightly_active
+                        </td>
+
+                        <td>
+                            @data.moderately_active
+                        </td>
+
+                        <td>
+                            @data.very_active
+                        </td>
+
+                        <td>
+                            @data.extra_active
+                        </td>
+
+                        <td>
+                            @data.BMR
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+            </body>
+}

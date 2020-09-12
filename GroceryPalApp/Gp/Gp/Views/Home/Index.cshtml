@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+<body style="background-color: lightcyan">
+    <div>
+
+        <img src="~/Content/u.jpg" width="600" height="500" style="background-color: transparent; margin-top: 50px;
+                margin-left: 700px">
+    </div>
+
+    <div>
+        <h1 style="color: darkblue; font-size: 50px; font-family: Georgia; margin-top: -430px; margin-left: -160px;">
+            <strong>
+                The “Grocery Pal” will take
+                <br>
+                all of the burden of managing
+                <br>
+                inventory from a person
+            </strong>
+        </h1>
+        <p style="color: darkblue; font-size: 30px; font-family: Georgia; margin-left: -160px;">
+            along with alerting the person about a product’s
+            <br>
+            expiry date and producing monthly consumption
+            <br>
+            report. This project will automate the whole process
+            <br>
+            of budget analyzing.
+        </p>
+
+    </div>
+
+    <div style= "font-size: 25px; margin-top: 100px; margin-left: 340px; font-family: Arial; font-weight: bold;" >
+            @Html.ActionLink("Click here to take a Website tour","Slide","",new { style= "color: red"})
+    </div>
+</body>
+}

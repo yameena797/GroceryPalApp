@@ -1,0 +1,122 @@
+﻿
+@model Gp.Models.User
+
+@{
+    ViewBag.Title = "Calorie_Calculator";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .input-container {
+                display: -ms-flexbox;
+                display: flex;
+                width: 100%;
+                margin-top: 35px;
+            }
+
+            .icon {
+                padding: 10px;
+                background-color: darkblue;
+                color: white;
+                min-width: 50px;
+                text-align: center;
+                margin-left: 30px;
+            }
+
+            .input-field {
+                width: 100%;
+                padding: 10px;
+                outline: none;
+            }
+
+                .input-field:focus {
+                    border: 2px solid darkblue;
+                }
+
+            .btn {
+                background-color: darkblue;
+                color: white;
+                padding: 15px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+                margin-top: 35px;
+            }
+
+                .btn:hover {
+                    opacity: 1;
+                    color: lightskyblue;
+                }
+
+            .wrap-login100 {
+                width: 390px;
+                height: 480px;
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: lightskyblue;
+                padding-bottom: 50px;
+                padding-top: 30px;
+                margin-top: -540px;
+                margin-left: 865px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: lavender;">
+        <div>
+
+            <img src="~/Content/cc.jpg" width="800" height="600" style="background-color: transparent; margin-top: 40px;
+                margin-left: -120px">
+        </div>
+
+        <div class="wrap-login100">
+
+            <form style="max-width:500px;margin:auto">
+                <h2 style="color: white;  margin-top: 0px; text-align: center;">CALORIE CALCULATOR</h2>
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input class="input-field" type="text" placeholder="Gender" name="m.gender">
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-arrow-right icon"></i>
+                    <input class="input-field" type="text" placeholder="Age" name="m.age">
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-arrow-right icon"></i>
+                    <input class="input-field" type="text" placeholder="Height" name="m.height">
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-arrow-right icon"></i>
+                    <input class="input-field" type="text" placeholder="Weight" name="m.weight">
+                </div>
+
+                <button type="submit" class="btn">RESULT</button>
+
+            </form>
+
+        </div>
+    </body>
+}
+
+
+
+
